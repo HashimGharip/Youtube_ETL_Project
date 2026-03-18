@@ -1,0 +1,4 @@
+Create enviroment --> py -m venv venvName   
+Active envirmeont --> Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
+                  --> venv\Scripts\Activate.ps1   
+Git resquest libarary module --> pip install requests
