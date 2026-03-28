@@ -4,3 +4,24 @@ Active envirmeont --> Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
 Git resquest libarary module --> pip install requests
 
 pip install python-dotenv
+
+#Airflow commands
+airflow --helpexit
+
+#Docker commands
+docker ps
+docker exec -it airflow-scheduler bash
+docker compose up -d
+docker compose down
+docker compose up -d --builddocker
+docker volume ls
+
+docker exec -it postgres psql -U yt_api_user -d elt_db
+ SELECT * FROM core.yt_api;
+
+\du  --> get list of database roles
+\l  --> get all databse names and details
+
+
+
+#github repo:https://github.com/MattTheDataEngineer/YT_ELT/blob/main/docker/postgres/init-multiple-databases.sh
