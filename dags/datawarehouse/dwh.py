@@ -45,8 +45,12 @@ def staging_table():
                 else:
                     insert_rows(cur, conn, schema, row)
 
+        # “Go through each row in YT_data, take the video_id, and store all of them in a set.”
         ids_in_json = {row["video_id"] for row in YT_data}
 
+        # “Find IDs that are in the database (table_ids) but NOT in your JSON data (ids_in_json).”
+        # That is mean the ids deleted from source so no need to be stored in database
+        # table_ids may have extra ids need to delete
         ids_to_delete = set(table_ids) - ids_in_json
 
         if ids_to_delete:

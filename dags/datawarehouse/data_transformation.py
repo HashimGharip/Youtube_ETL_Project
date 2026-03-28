@@ -23,6 +23,7 @@ def parse_duration(duration_str):
 
 
 def transform_data(row):
+    # we here update passed row (convert duration as time , define video type) and send it back to continue process
 
     duration_td = parse_duration(row["Duration"])
 
