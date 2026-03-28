@@ -1,6 +1,6 @@
 from datawarehouse.data_utils import (
     get_conn_cursor,
-    close_conn_cursor,
+    close_conn_cursor, 
     create_schema,
     create_table,
     get_video_ids,
