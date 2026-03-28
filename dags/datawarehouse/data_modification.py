@@ -4,6 +4,11 @@ logger = logging.getLogger(__name__)
 table = "yt_api"
 
 
+# %(name)s is a named placeholder used for parameterized SQL queries.
+# %(video_id)s means:
+# “Take the value associated with "video_id" from the dictionary and put it here safely.”
+#for s -> Even if the value is a number, the database adapter handles it correctly.
+
 def insert_rows(cur, conn, schema, row):
 
     try:
@@ -21,8 +26,8 @@ def insert_rows(cur, conn, schema, row):
             )
 
         else:
-
-            video_id = "Video_ID"
+            # same as column name in staging area 
+            video_id = "Video_ID" 
 
             cur.execute(
                 f"""
