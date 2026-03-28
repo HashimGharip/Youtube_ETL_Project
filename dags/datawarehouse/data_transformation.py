@@ -2,9 +2,11 @@ from datetime import timedelta, datetime
 
 
 def parse_duration(duration_str):
-
+   
+    #example : P1DT30M13S
     duration_str = duration_str.replace("P", "").replace("T", "")
-
+    #expected : 1D30M13S
+    
     components = ["D", "H", "M", "S"]
     values = {"D": 0, "H": 0, "M": 0, "S": 0}
 
